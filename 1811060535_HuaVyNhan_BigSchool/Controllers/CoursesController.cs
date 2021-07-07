@@ -18,8 +18,7 @@ namespace _1811060535_HuaVyNhan_BigSchool.Controllers
         {
             _dbContext = new ApplicationDbContext();
         }
-        [Authorize]
-        [HttpPost]
+        
         public ActionResult Create()
         {
             var viewModel = new CourseViewModel
@@ -28,7 +27,9 @@ namespace _1811060535_HuaVyNhan_BigSchool.Controllers
             };
             return View(viewModel);
         }
-
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CourseViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -45,6 +46,7 @@ namespace _1811060535_HuaVyNhan_BigSchool.Controllers
             };
             _dbContext.Courses.Add(course);
             _dbContext.SaveChanges();
+
             return RedirectToAction("Index", "Home");
         }
     }

@@ -12,13 +12,20 @@ namespace _1811060535_HuaVyNhan_BigSchool.ViewModels
         [Required]
         public string Place { get; set; }
         [Required]
+        [FutureDate]
         public string Date { get; set; }
         [Required]
+        [ValidTime]
         public string Time { get; set; }
         [Required]
         public byte Category { get; set; }
+        [Required]
         public IEnumerable<Category> Categories { get; set; }
 
-        public DateTime GetDateTime() => DateTime.Parse(string.Format("{0} {1}", Date, Time));
+        //public DateTime GetDateTime() => DateTime.Parse(string.Format("{0} {1}", Date, Time));
+        public DateTime GetDateTime()
+        {
+            return DateTime.Parse(string.Format("{0} {1}", Date, Time));
+        }
     }
 }
