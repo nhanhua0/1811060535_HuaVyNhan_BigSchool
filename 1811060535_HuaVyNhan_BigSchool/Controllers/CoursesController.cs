@@ -11,7 +11,7 @@ namespace _1811060535_HuaVyNhan_BigSchool.Controllers
 {
     public class CoursesController : Controller
     {   
-        private  readonly ApplicationDbContext _dbContext;
+        private   ApplicationDbContext _dbContext;
 
 
         public CoursesController()  
@@ -30,6 +30,7 @@ namespace _1811060535_HuaVyNhan_BigSchool.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public ActionResult Create(CourseViewModel viewModel)
         {
             if (!ModelState.IsValid)
