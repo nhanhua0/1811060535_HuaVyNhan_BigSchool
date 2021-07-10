@@ -9,14 +9,16 @@ namespace _1811060535_HuaVyNhan_BigSchool.ViewModels
 {
     public class ValidTime : ValidationAttribute
     {
+
         public override bool IsValid(object value)
         {
             DateTime dateTime;
-            var isValid = DateTime.TryParseExact(Convert.ToString(value), "HH:mm",
+            var isValid = DateTime.TryParseExact(Convert.ToString(value),
+                "HH:mm",
                 CultureInfo.CurrentCulture,
                 DateTimeStyles.None,
                 out dateTime);
-            return (isValid && dateTime > DateTime.Now);
+            return isValid;
         }
     }
 }

@@ -10,27 +10,28 @@ using System.Web.Mvc;
 namespace _1811060535_HuaVyNhan_BigSchool.Controllers
 {
     public class CoursesController : Controller
-    {   
-        private   ApplicationDbContext _dbContext;
+    {
+        private readonly ApplicationDbContext _dbContext;
 
-
-        public CoursesController()  
+        public CoursesController()
         {
             _dbContext = new ApplicationDbContext();
         }
-        
+        // GET: Courses
+        [Authorize]
         public ActionResult Create()
         {
             var viewModel = new CourseViewModel
             {
                 Categories = _dbContext.Categories.ToList()
-            };
+
+        };
             return View(viewModel);
         }
+
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public ActionResult Create(CourseViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -38,10 +39,11 @@ namespace _1811060535_HuaVyNhan_BigSchool.Controllers
                 viewModel.Categories = _dbContext.Categories.ToList();
                 return View("Create", viewModel);
             }
+
             var course = new Course
             {
-                LecturedId = User.Identity.GetUserId(),
-                DateTime = viewModel.GetDateTime(),
+                LecturerId = User.Identity.GetUserId(),
+                DataTime = viewModel.GetDateTime(),
                 CategoryId = viewModel.Category,
                 Place = viewModel.Place
             };

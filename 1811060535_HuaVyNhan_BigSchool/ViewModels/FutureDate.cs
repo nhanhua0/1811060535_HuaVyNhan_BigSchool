@@ -12,12 +12,13 @@ namespace _1811060535_HuaVyNhan_BigSchool.ViewModels
         public override bool IsValid(object value)
         {
             DateTime dateTime;
-            var isValid = DateTime.TryParseExact(Convert.ToString(value), "dd/MM/yyyy",
+            var isValid = DateTime.TryParseExact(Convert.ToString(value),
+                "dd/MM/yyyy",
                 CultureInfo.CurrentCulture,
-                DateTimeStyles.AssumeLocal, 
+                DateTimeStyles.AssumeLocal,
                 out dateTime);
-
             return (isValid && dateTime > DateTime.Now);
         }
     }
+    //tessst
 }
