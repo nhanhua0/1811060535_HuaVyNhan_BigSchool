@@ -13,7 +13,7 @@ namespace _1811060535_HuaVyNhan_BigSchool.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202106300750403_CreateTableCourse"; }
+            get { return "202107120950092_CreateTableCourse"; }
         }
         
         string IMigrationMetadata.Source

@@ -9,7 +9,7 @@ namespace _1811060535_HuaVyNhan_BigSchool.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(_1811060535_HuaVyNhan_BigSchool.Models.ApplicationDbContext context)
