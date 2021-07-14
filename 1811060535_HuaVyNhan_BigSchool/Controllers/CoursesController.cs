@@ -103,6 +103,22 @@ namespace _1811060535_HuaVyNhan_BigSchool.Controllers
             };
             return View("Create", viewModel);
         }
+        public ActionResult Following()
+        {
+            var userId = User.Identity.GetUserId();
+            var followings = _dbContext.Followings
+                .Where(a => a.FolloweeId == userId)
+                .Select(a => a.Follower)
+                .ToList();
+
+            var viewModel = new FollowingViewModel
+            {
+                Followings = followings,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
+        }
 
         [Authorize]
         [HttpPost]
