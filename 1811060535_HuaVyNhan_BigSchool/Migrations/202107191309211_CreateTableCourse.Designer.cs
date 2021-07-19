@@ -7,13 +7,13 @@ namespace _1811060535_HuaVyNhan_BigSchool.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddNameColumnToApplicationUser : IMigrationMetadata
+    public sealed partial class CreateTableCourse : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddNameColumnToApplicationUser));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateTableCourse));
         
         string IMigrationMetadata.Id
         {
-            get { return "202107120951376_AddNameColumnToApplicationUser"; }
+            get { return "202107191309211_CreateTableCourse"; }
         }
         
         string IMigrationMetadata.Source

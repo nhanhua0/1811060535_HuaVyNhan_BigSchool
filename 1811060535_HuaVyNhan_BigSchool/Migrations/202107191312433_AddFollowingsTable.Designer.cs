@@ -13,7 +13,7 @@ namespace _1811060535_HuaVyNhan_BigSchool.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202107120953288_AddFollowingsTable"; }
+            get { return "202107191312433_AddFollowingsTable"; }
         }
         
         string IMigrationMetadata.Source
