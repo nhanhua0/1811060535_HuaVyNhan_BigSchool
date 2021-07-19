@@ -14,7 +14,7 @@ namespace _1811060535_HuaVyNhan_BigSchool.Controllers.Api
         // GET: Following
         public class FollowingsController : ApiController
         {
-            private  readonly ApplicationDbContext _dbContext;
+            private ApplicationDbContext _dbContext;
 
             public FollowingsController()
             {
