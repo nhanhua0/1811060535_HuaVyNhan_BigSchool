@@ -182,7 +182,7 @@
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\FollowingController.cs" />
-    <Compile Include="Controllers\FollowingViewModel.cs" />
+    <Compile Include="Models\FollowingViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LectureController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
