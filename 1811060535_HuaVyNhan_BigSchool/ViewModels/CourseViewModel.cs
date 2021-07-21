@@ -30,4 +30,5 @@ namespace _1811060535_HuaVyNhan_BigSchool.ViewModels
             return DateTime.Parse(String.Format("{0},{1}", Date, Time));
         }
     }
+    //chấm bài 
 }
